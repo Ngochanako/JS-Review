@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //tao mang có đối tuwongj sách
+      let listBook = [
+        {
+          id: 1,
+          name: "A",
+        },
+        {
+          id: 2,
+          name: "B",
+        },
+        {
+          id: 3,
+          name: "C",
+        },
+      ];
+      //tìm kiếm sách có tên B
+      let id = prompt("Nhập id sách cần tìm kiếm");
+      let book = listBook.find((item) => {
+        return item.id === +id;
+      });
+      if (book) {
+        console.log(book);
+      } else {
+        console.log("Không có kết quả");
+      }
+    </script>
+  </body>
+</html>

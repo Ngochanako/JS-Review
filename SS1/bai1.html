@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //khởi tạo đối tượng
+    function Class(name, student) {
+      this.name = name;
+      this.student = student;
+    }
+    let class1 = new Class("A", "Nam");
+    let class2 = new Class("A", "Huyen");
+    let class3 = new Class("B", "Van");
+    let class4 = new Class("B", "Linh");
+    //khởi tạo mảng
+    let arr = [class1, class2, class3, class4];
+    //sử dụng forEach để duyệt qua mảng
+    arr.forEach(function display(student) {
+      console.log(student.student);
+    });
+  </script>
+</html>

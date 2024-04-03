@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, 2, 5, 3, 80, 45, -2, 8];
+      let num = 10;
+      //tìm số lớn nhất trong mảng <= num
+      let newArr = arr.filter((item) => item <= num).sort((a, b) => b - a);
+      console.log(newArr[0])
+    </script>
+  </body>
+</html>

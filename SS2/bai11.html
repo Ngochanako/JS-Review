@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function find(arr) {
+      for (let btn of arr) {
+        if (!Number.isInteger(btn)) {
+          console.log("Sai kiểu dữ liệu");
+          return;
+        }
+      }
+      return console.log( arr.reduce((max, number, index) => {
+        if (max > number) max = number;
+        return { element: max, index: index };
+      }, arr[0]))
+    }
+    find([1, 2, 3]);
+  </script>
+</html>

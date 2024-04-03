@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let listAccount = [
+        {
+          userName: "Ngoc",
+          password: "abc",
+        },
+        {
+          userName: "Mai",
+          password: "b bc",
+        },
+        {
+          userName: "Hoa",
+          password: "abd c",
+        },
+      ];
+      //kiểm tra mật khẩu tài khoản có chứa khoảng trắng không
+      newListAccount = listAccount.reduce((arr, account, index) => {
+        if (account.password.includes(" ")) {
+          arr.push(index);
+        }
+        return arr;
+      }, []);
+      //in mảng mới
+      console.log(newListAccount);
+    </script>
+  </body>
+</html>

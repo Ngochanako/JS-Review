@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //ham kiem tra so nguyen to
+      function isPrime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return num > 1;
+      }
+      function hasPrimeNumber(arr) {
+        return arr.some((item) => isPrime(item));
+      }
+      console.log(hasPrimeNumber([4, 6, 8, 9, 11]));
+      console.log(hasPrimeNumber([4, 6, 8, 9, 10]));
+    </script>
+  </body>
+</html>

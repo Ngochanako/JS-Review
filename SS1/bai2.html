@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //tạo mảng đối tượng là lớp học
+    function Class(id, number) {
+      this.id = id;
+      this.number = number;
+    }
+    let class1 = new Class(1, 25);
+    let class2 = new Class(1, 30);
+    let class3 = new Class(1, 50);
+    let listClass = [class1, class2, class3];
+    //tạo mảng mới
+    let newListClass = listClass.map((item)=> {
+      let newItem = Object.assign({},item);
+      if (newItem.number < 30) newItem.number += 10;
+      if (newItem.number > 40) newItem.number -= 10;
+      return newItem;
+    });
+    //in mảng mới
+    console.log(listClass);
+    console.log(newListClass);
+  </script>
+</html>
